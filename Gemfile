@@ -41,6 +41,11 @@ gem 'spring',        group: :development
 # use mysql2
 gem 'mysql2'
 
+gem 'angularjs-rails'
+gem 'js-routes'
+gem "twitter-bootstrap-rails"
+
 group :development do 
   gem 'annotate'
+  gem 'pry'
 end

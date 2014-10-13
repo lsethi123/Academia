@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: school_networks
+#
+#  id         :integer          not null, primary key
+#  school_id  :integer
+#  network_id :integer
+#  archived   :boolean
+#  created_at :datetime
+#  updated_at :datetime
+#  role       :string(255)
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined.  If you add columns to the

@@ -1,0 +1,33 @@
+<center>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h4>Please Login</h4>
+  
+      <%= form_tag school_users_login_path, :method => "POST", :class => "form-horizontal" do %>
+        <div class="form-group" style="max-width:300px;">
+          <div class="col-sm-12">
+            <label class="control-label">Username</label>
+          </div>
+          <div class="col-sm-12">
+            <input type="text" class="form-control input-medium" name="user[username]" />
+          </div>
+        </div>
+
+        <div class="form-group" style="max-width:300px;">
+          <div class="col-sm-12">
+            <label class="control-label">Password</label>
+          </div>
+          <div class="col-sm-12">
+            <input type="text" class="form-control input-medium" name="user[password]" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button class="btn btn-default new-user-button">New User</button>
+        </div>        
+      <% end %>
+    </div>
+  </div>
+
+</center>

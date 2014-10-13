@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141012162931) do
+ActiveRecord::Schema.define(version: 20141013032819) do
 
   create_table "networks", force: true do |t|
     t.string   "name"
@@ -21,11 +21,13 @@ ActiveRecord::Schema.define(version: 20141012162931) do
   end
 
   create_table "school_classes", force: true do |t|
+    t.integer  "school_id"
     t.string   "name"
     t.string   "subject"
     t.integer  "size"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.boolean  "archived"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +36,25 @@ ActiveRecord::Schema.define(version: 20141012162931) do
     t.integer  "school_id"
     t.integer  "network_id"
     t.boolean  "archived"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "role"
+  end
+
+  create_table "school_user_networks", force: true do |t|
+    t.integer  "school_user_id"
+    t.integer  "network_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "school_users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "username"
+    t.string   "password"
+    t.string   "confirm_password"
+    t.datetime "last_login_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,36 +68,14 @@ ActiveRecord::Schema.define(version: 20141012162931) do
     t.string   "phone"
     t.string   "website"
     t.string   "email"
-    t.integer  "network_school_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_networks", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "network_id"
-    t.boolean  "archived"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "middle_name"
-    t.string   "email"
-    t.string   "username"
-    t.string   "password"
-    t.string   "confirm_password"
-    t.datetime "last_login_date"
-    t.string   "role"
-    t.integer  "default_school_id"
+    t.integer  "parent_school_id"
     t.boolean  "archived"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "white_labels", force: true do |t|
+    t.integer  "school_id"
     t.string   "name"
     t.string   "description"
     t.datetime "created_at"

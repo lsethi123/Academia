@@ -9,7 +9,7 @@ class CreateSchools < ActiveRecord::Migration
       t.string :phone
       t.string :website
       t.string :email
-      t.integer :network_school_id
+      t.integer :parent_school_id
       t.boolean :archived
 
       t.timestamps

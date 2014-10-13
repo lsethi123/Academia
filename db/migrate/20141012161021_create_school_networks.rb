@@ -1,8 +1,8 @@
 class CreateSchoolNetworks < ActiveRecord::Migration
   def change
     create_table :school_networks do |t|
-      t.integer :school_id
-      t.integer :network_id
+      t.belongs_to :school
+      t.belongs_to :network
       t.boolean :archived
       t.timestamps
     end
