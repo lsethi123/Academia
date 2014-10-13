@@ -10,8 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require js-routes
-//= require bootstrap
-//= require_tree .
+//= require lodash
+//= require angular
+//= require angular-lodash
+//= require angular-bootstrap
+//= require angular-animate
+//= require angular-resource
+//= require angular-route
+//= require angular-route-segment
+//= require angular-sanitize
+//= require underscore-string
+//= require underscore-inflections
+

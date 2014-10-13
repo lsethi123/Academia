@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -40,10 +40,21 @@ gem 'spring',        group: :development
 
 # use mysql2
 gem 'mysql2'
-
-gem 'angularjs-rails'
 gem 'js-routes'
-gem "twitter-bootstrap-rails"
+gem 'js_assets'
+gem 'underscore-inflections-rails'
+
+gem 'rails-assets-lodash'
+gem 'rails-assets-angular-lodash'
+gem 'rails-assets-bootstrap'
+gem 'rails-assets-angular'
+gem 'rails-assets-angular-animate'
+gem 'rails-assets-angular-resource'
+gem 'rails-assets-angular-route'
+gem 'rails-assets-angular-route-segment'
+gem 'rails-assets-angular-sanitize'
+gem 'rails-assets-angular-bootstrap'
+
 
 group :development do 
   gem 'annotate'

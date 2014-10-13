@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :school_users
 
-  get 'school_users/login' => 'school_users#login'
+  post 'school_users/login' => 'school_users#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

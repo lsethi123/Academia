@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Academia">
 <head>
   <title>Academia</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= yield :layout_javascript  %>
+  <%= yield :javascript  %>  
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-cloak>
 
 <%= content_for?(:content) ? yield(:content) : yield %>
 
