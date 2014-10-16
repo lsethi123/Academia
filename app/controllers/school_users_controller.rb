@@ -7,14 +7,14 @@ class SchoolUsersController < ApplicationController
     match = found_user.blank? ? false : found_user.password == user[:password]
     path = new_school_user_path
     if match
-      session[:user] = user
+      session[:school_user] = user
       path = root_path
     end
     flash[:error] = "Invalid username and password. User was not found."
     redirect_to path
   end
 
-  def new 
+  def new
     respond_to do |format|
       format.html
     end 

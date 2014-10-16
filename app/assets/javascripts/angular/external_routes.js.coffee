@@ -4,8 +4,8 @@
 #= require_tree ./controllers/external
 
 'use strict'
-
-angular.module('Academia', ["ngResource", "ngRoute", "route-segment", 'view-segment', 'ngSanitize', 'ui.bootstrap'])
+debugger
+angular.module('Academia', ["ngResource", "ngRoute", "route-segment", 'view-segment', 'ngSanitize'])
   .config(['$routeSegmentProvider', '$locationProvider', '$routeProvider', ($routeSegmentProvider, $locationProvider, $routeProvider) ->
 
     $locationProvider.html5mode(true)

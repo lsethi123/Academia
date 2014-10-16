@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :school_users
 
   post 'school_users/login' => 'school_users#login'
-
+  get "dashboard" => "home#dashboard"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
